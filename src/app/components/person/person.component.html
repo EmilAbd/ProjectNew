@@ -1,0 +1,11 @@
+<div class="item">
+    <img [src]="person.image" [alt]="person.lastname">
+    <h2>{{ person.firstname }} {{ person.lastname }}</h2>
+    <h4>{{ person.birthday }}</h4>
+    <button
+    (click)="isVisible = !isVisible">
+    {{isVisible? 'Hide contact details' : 'Show contact details'}}
+    </button>
+    <p *ngIf="isVisible">{{ person.phone }}</p>
+    <p *ngIf="isVisible">{{ person.email }}</p>
+</div>

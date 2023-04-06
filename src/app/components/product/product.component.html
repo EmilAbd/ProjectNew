@@ -1,0 +1,13 @@
+<div class="item">
+    <h2>{{ product.name }}</h2>
+    <img [src]="product.image" [alt]="product.name">
+    
+    <button 
+    (click)="isVisible = !isVisible">
+    {{isVisible? 'Hide' : 'Show'}}
+    </button>
+
+    <p>Price: {{ product.price }}</p>
+    <p *ngIf="isVisible">{{ product.description }}</p>
+
+</div>
